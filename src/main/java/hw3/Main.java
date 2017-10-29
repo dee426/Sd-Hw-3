@@ -1,11 +1,10 @@
 package hw3;
 
-import java.util.Scanner;
 
 import org.apache.commons.cli.*;
 
 
-public class Main implements Comparable{
+public class Main implements Comparable<Object>{
 
 
 	
@@ -30,7 +29,6 @@ public class Main implements Comparable{
 		options.addOption(keyIn);
 		options.addOption(listIn);
 
-		Scanner reader = new Scanner(System.in);
 		try {
 			CommandLine cmd = parser.parse(options, args);
 
@@ -43,10 +41,10 @@ public class Main implements Comparable{
 				System.out.println("Key Selected: " + inKey);
 
 				char typeConv = inType.charAt(0);
-				for (int i =0; i< inList.length; i++)
-				{
-					System.out.println("List Selected: " + inList[i]);
-				}
+				//for (int i =0; i< inList.length; i++)
+				//{
+					//System.out.println("List Selected: " + inList[i]);
+				//}
 				
 				if (typeConv == 'i')
 				{
@@ -57,10 +55,10 @@ public class Main implements Comparable{
 						numbList[i] = Integer.parseInt(inList[i]);
 					}
 					
-					for (int i =0; i< numbList.length; i++)
-					{
-						System.out.print(inList[i] + " ");
-					}
+					//for (int i =0; i< numbList.length; i++)
+					//{
+						//System.out.print(inList[i] + " ");
+					//}
 					
 					int newKey = Integer.parseInt(inKey);
 					intFunction(numbList,  newKey);
@@ -96,7 +94,7 @@ public class Main implements Comparable{
          while(high >= low) {
              int middle = (low + high) / 2;
              if(list[middle] == input) {
-                 System.out.println("Found " + input + " at index: " + list[middle]);
+                 //System.out.println("Found " + input + " at index: " + list[middle]);
                  return true;
              }
              else if(list[middle] < input) {
@@ -118,10 +116,11 @@ public class Main implements Comparable{
          while(high >= low) {
              int middle = (low + high) / 2;
              int compare = key.compareTo(list[middle]);
-				System.out.println(compare + " " + list[middle]);
+				//System.out.println(compare + " " + list[middle]);
 
              if(compare == 0) {
-                 System.out.println("Found " + key + " at index: " + middle);
+                 //System.out.println("Found " + key + " at index: " + middle);
+            	 System.out.println("1");
                  return true;
              }
              else if(compare > 0) {
@@ -131,6 +130,7 @@ public class Main implements Comparable{
                  high = middle - 1;
              }
         }
+         System.out.println("0");
           return false;
     }
 	
@@ -140,14 +140,14 @@ public class Main implements Comparable{
 		boolean isIn = binSearch( key, list, list.length);
 		
 		if (isIn){
-			System.out.println("0");
-		}else{	System.out.println("1");	}
+			System.out.println("1");
+		}else{	System.out.println("0");	}
 		
 	}
 	
 	public static void stringFunction(String[] list, String key)
 	{
-		System.out.println("....");
+		//System.out.println("....");
 
 	     binSearchC(key, list, list.length);
 
