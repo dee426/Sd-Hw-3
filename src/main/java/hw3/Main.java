@@ -20,9 +20,9 @@ public class Main implements Comparable<Object>{
 		CommandLineParser parser = new BasicParser();
 		Options options = new Options();
 
-		Option typeCase = new Option("t", Type, true, " ìiî for integer and ìsî for string ");
-		Option keyIn = new Option("k", Key, true, " ìiî for integer and ìsî for string ");
-		Option listIn = new Option("l", List, true, " ìiî for integer and ìsî for string ");
+		Option typeCase = new Option("t", Type, true, " ‚Äúi‚Äù for integer and ‚Äús‚Äù for string ");
+		Option keyIn = new Option("k", Key, true, " ‚Äúi‚Äù for integer and ‚Äús‚Äù for string ");
+		Option listIn = new Option("l", List, true, " ‚Äúi‚Äù for integer and ‚Äús‚Äù for string ");
 		listIn.setArgs(100);
 		
 		options.addOption(typeCase);
@@ -107,7 +107,7 @@ public class Main implements Comparable<Object>{
           return false;
     }
     
-    public static <T extends Comparable<T>> boolean binSearchC(T key, T[] list, int size)
+    public static <T extends Comparable<T>> boolean binSearchC(T key, T[] list, int size)//hi
     {
         
          int low = 0;
